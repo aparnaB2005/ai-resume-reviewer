@@ -9,7 +9,7 @@ const app=express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'ai-resume-reviewer-app-sigma.vercel.app'  // add your vercel URL here
+    'https://ai-resume-reviewer-app-sigma.vercel.app'  // add your vercel URL here
   ]
 }));
 app.use(express.json());
