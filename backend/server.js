@@ -6,12 +6,19 @@ require('dotenv').config();
 
 
 const app=express();
+
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://ai-resume-reviewer-app-sigma.vercel.app'  // add your vercel URL here
-  ]
+    'https://ai-resume-reviewer-app-sigma.vercel.app',
+    'https://ai-resume-reviewer-734dbug3z-aparna-bhargava-s-projects.vercel.app',
+    'https://ai-resume-reviewer-app-git-main-aparna-bhargava-s-projects.vercel.app'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
+
+
 app.use(express.json());
 
 app.use('/api/auth',require('./routes/auth'));
